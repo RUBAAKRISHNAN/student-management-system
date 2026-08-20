@@ -19,29 +19,32 @@ function Register(){
         const registerData={
             name,email,password
         };
-        try{
-                // const response=await fetch("http://localhost:5000/api/auth/register",{
-                //     method:"POST",
-                //     headers:{
-                //         "Content-Type":"application/json"
-                //     },
-                //     body:JSON.stringify(registerData)
-                // });
-                const response=await apiFetch("/Register")
-               const data=await response.json();
-               console.log("Registered data:",data);
-               if(!response.ok){
-                alert("your response not get yet");
-                return;
-               }
-               alert("Registration Successfull");
-               navigate("/login");
+       try {
 
-        }
-        catch(err){
-            console.log(err.message);
-        }
-    };
+  const response = await apiFetch("/auth/register", {
+    method: "POST",
+    body: JSON.stringify(registerData)
+  });
+
+  const data = await response.json();
+
+  console.log("Registered data:", data);
+
+  if (!response.ok) {
+    alert(data.message || "Registration failed");
+    return;
+  }
+
+  alert("Registration Successful");
+
+  navigate("/login");
+
+} catch (err) {
+
+  console.log("Register error:", err);
+  alert("Something went wrong");
+
+}
    return (
   <div className="auth-page">
 
@@ -124,5 +127,5 @@ function Register(){
 
   </div>
 );
-}
+}}
 export default Register;
