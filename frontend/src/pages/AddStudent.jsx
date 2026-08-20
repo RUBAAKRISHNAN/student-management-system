@@ -5,6 +5,7 @@ import { apiFetch } from "../api/api";
 
 
 import MainLayout from "../layouts/MainLayout";
+import { Link } from "react-router-dom";
 import "../styles/AddStudent.css"
 function AddStudent() {
   const navigate = useNavigate();
@@ -130,13 +131,9 @@ if((!email.includes("@")) || (!email.includes("."))){
 
         <div className="back-links">
 
-          <a href="/students">
-            ← Back to Students
-          </a>
+          <Link to="/students">Students</Link>
 
-          <a href="/dashboard">
-            ← Dashboard
-          </a>
+          <Link to="/dashboard">DashBoard</Link>
 
         </div>
 

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import Navbar from "../components/Navbar";
 import { apiFetch } from "../api/api";
+import { Link } from "react-router-dom";
 import "../styles/Auth.css";
 function Register(){
     const navigate=useNavigate();
@@ -114,9 +115,7 @@ function Register(){
 
         <p>
           Already have an account?{" "}
-          <a href="/login">
-            Login
-          </a>
+          <Link to="/login">Login</Link>
         </p>
 
       </div>

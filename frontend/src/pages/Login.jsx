@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 
 import MainLayout from "../layouts/MainLayout";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Auth.css";
 
 function Login() {
@@ -130,9 +131,7 @@ function Login() {
 
         <p>
           Don't have an account?{" "}
-          <a href="/register">
-            Register
-          </a>
+          <Link to="/register">Register</Link>
         </p>
 
       </div>
