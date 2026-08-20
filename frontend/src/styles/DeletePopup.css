@@ -1,0 +1,113 @@
+.delete-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+.delete-popup {
+  width: 380px;
+
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.2);
+
+  animation: popupIn 0.2s ease;
+}
+
+@keyframes popupIn {
+
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.delete-icon {
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.delete-popup h2 {
+  margin-bottom: 10px;
+}
+
+.delete-popup p {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.delete-warning {
+  color: #ef4444 !important;
+
+  font-size: 13px !important;
+}
+
+.delete-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.delete-buttons button {
+  padding: 10px 25px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  border: none;
+}
+
+.delete-cancel {
+  background: #f3f4f6;
+
+  color: #374151;
+}
+
+.delete-cancel:hover {
+  background: #e5e7eb;
+}
+
+.delete-confirm {
+  background: #ef4444;
+
+  color: white;
+}
+
+.delete-confirm:hover {
+  background: #dc2626;
+}

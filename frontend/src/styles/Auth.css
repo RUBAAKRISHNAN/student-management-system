@@ -1,0 +1,171 @@
+.auth-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #fdf2f8,
+    #f5f3ff,
+    #eff6ff
+  );
+
+  padding: 30px;
+}
+
+.auth-card {
+  width: 400px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.auth-logo {
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.auth-logo h1 {
+  font-size: 22px;
+
+  background: linear-gradient(
+    90deg,
+    #ec4899,
+    #c026d3,
+    #6366f1
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.auth-title {
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.auth-title h2 {
+  margin-bottom: 6px;
+}
+
+.auth-title p {
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* INPUT */
+
+.auth-form-group {
+  margin-bottom: 18px;
+}
+
+.auth-form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.auth-form-group input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.auth-form-group input:focus {
+  border-color: #c026d3;
+
+  box-shadow:
+    0 0 0 3px rgba(192, 38, 211, 0.1);
+}
+
+
+/* BUTTON */
+
+.auth-btn {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    90deg,
+    #f472b6,
+    #d946ef,
+    #818cf8
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 18px rgba(217, 70, 239, 0.3);
+}
+
+
+/* BOTTOM LINK */
+
+.auth-footer {
+  text-align: center;
+
+  margin-top: 20px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #9333ea;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
