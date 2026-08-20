@@ -44,7 +44,7 @@ function Register(){
   console.log("Register error:", err);
   alert("Something went wrong");
 
-}
+}}
    return (
   <div className="auth-page">
 
@@ -127,5 +127,5 @@ function Register(){
 
   </div>
 );
-}}
+}
 export default Register;

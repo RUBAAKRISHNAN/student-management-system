@@ -72,41 +72,31 @@ function Students() {
 
 
   const handleDelete = async (id) => {
+  try {
 
-    const token = localStorage.getItem("token");
+    const response = await apiFetch(`/students/${id}`, {
+      method: "DELETE"
+    });
 
-    try {
+    const data = await response.json();
 
-      const response = await fetch(
-        `http://localhost:5000/api/students/${id}`,
-        {
-          method: "DELETE",
+    console.log(data);
 
-          headers: {
-            "Authorization": `Bearer ${token}`
-          }
-        }
-      );
-
-      const data = await response.json();
-
-      console.log(data);
-
-      if (response.ok) {
-
-        setStudents(
-          students.filter((student) => student._id !== id)
-        );
-
-      }
-
-    } catch (err) {
-
-      console.log("Delete error:", err);
-
+    if (!response.ok) {
+      throw new Error(data.message || "Delete failed");
     }
-  };
 
+    setStudents(
+      students.filter((student) => student._id !== id)
+    );
+
+  } catch (err) {
+
+    console.log("Delete error:", err);
+    alert(err.message);
+
+  }
+};
 
   const filterStudents = students.filter((student) => {
 
