@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import "../styles/Dashboard.css";
 import Dashcard from "../components/Dashcard";
-
+import { apiFetch } from "../api/api";
 function Dashboard() {
 
   const [students, setStudents] = useState([]);
@@ -15,15 +15,7 @@ function Dashboard() {
 
         const token = localStorage.getItem("token");
 
-        const response = await fetch(
-          "http://localhost:5000/api/students",
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          }
-        );
+      const response = await apiFetch("/students");
 
         const data = await response.json();
 
